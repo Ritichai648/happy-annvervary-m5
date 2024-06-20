@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Anuphan:wght@200&display=swap');
+
+* {
+  transition: all 0.2s ease-in-out;
+}
+
+
+.border {
+  border-radius: 4px;
+  height: 89vh;
+  width: 85vw;
+  background-color: #fdfdfd;
+}
+
+.card {
+  margin-top: 25px;
+  margin-left: 3px;
+  background: url('../img/wallpapper.jpg');
+  background-size: cover;
+  border-radius: 4px;
+  height: 85vh;
+  width: 80vw;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  overflow: hidden;
+}
+
+.card h1 {
+  padding-bottom: 2em;
+  margin-left: 100px;
+  font-family: 'Anuphan', sans-serif;
+}
+
+@media only screen and (min-width: 1000px) {
+  .card {
+    flex-direction: row-reverse;
+  }
+
+  .card img.birthday {
+    width: 100%;
+    max-width: 50vw;
+    max-height: unset;
+  }
+}
+
+@media only screen and (max-height: 640px) {
+  .card {
+    flex-direction: row-reverse;
+  }
+
+  .card img.birthday {
+    width: 100%;
+    max-width: 50vw;
+    max-height: unset;
+  }
+}
+
+img.fourmouth {
+  border-radius: 12px;
+  max-height: 40vh;
+}
+
+.text {
+  padding-left: 5em;
+  padding-right: 3.5em;
+  margin-left: 55px;
+  margin-top: 55px;
+  text-align: left;
+  font-family: 'Anuphan', sans-serif;
+  color: #ffaad9;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.muted {
+  opacity: 0.8;
+  text-align: center;
+  margin-left: 28px;
+  margin-bottom: 40px;
+}
+
+.space {
+  height: 100px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+body.play-music {
+  animation: fadeIn 2s ease-in-out;
+  /* Adjust the animation duration and timing function as needed */
+}
+
+#alert-box {
+  font-family: 'Anuphan', sans-serif;
+  color: #fdfdfd;
+  display: none;
+  border-radius: 10px;
+  position: fixed; /* ตำแหน่งคงที่ */
+  top: 50%; /* อยู่ด้านบน 50% ของหน้าจอ */
+  left: 50%; /* อยู่ด้านซ้าย 50% ของหน้าจอ */
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background: linear-gradient(#fffdfe,#ffaad9);
+  padding: 20px;
+  width: 300px;
+  height: 200px;
+  text-align: center;
+}
+
+#alert-message {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-family: 'Anuphan', sans-serif;
+}
+
+#alert-box button {
+  font-family: 'Anuphan', sans-serif;
+  padding: 5px 10px;
+  background-color: #f5788a;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+#alert-box img {
+  width: 65px; /* กำหนดความกว้างของ icon */
+  height: 65px; /* กำหนดความสูงของ icon */
+  margin-right: 10px; 
+  margin-top: 10px;
+  align-items: center;/* เว้นระยะห่างระหว่าง icon และข้อความ */
+}
